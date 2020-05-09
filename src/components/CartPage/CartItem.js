@@ -5,5 +5,6 @@ import {
 	FaChevronCircleDown,
 } from "react-icons/fa";
 export default function CartItem({ cartItem }) {
-	return <img src={cartItem.image} alt="none" />;
+	const { image } = cartItem;
+	return <img src={image} alt="none" />;
 }
