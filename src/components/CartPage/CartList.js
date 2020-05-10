@@ -22,6 +22,7 @@ export default function CartList() {
 									{cart.map((item) => (
 										<CartItem
 											key={item.id}
+											//here we have the cartItem props
 											cartItem={item}
 											increment={increment}
 											decrement={decrement}

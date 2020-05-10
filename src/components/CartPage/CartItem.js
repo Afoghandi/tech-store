@@ -10,6 +10,7 @@ export default function CartItem({
 	decrement,
 	removeItem,
 }) {
+	//We can't read the props here
 	const { id, title, price, count, total, image } = cartItem;
 
 	return (
