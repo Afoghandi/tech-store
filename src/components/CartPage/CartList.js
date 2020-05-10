@@ -18,7 +18,7 @@ export default function CartList() {
 								);
 							}
 							return (
-								<div>
+								<>
 									{cart.map((item) => (
 										<CartItem
 											key={item.id}
@@ -28,7 +28,7 @@ export default function CartList() {
 											removeItem={removeItem}
 										/>
 									))}
-								</div>
+								</>
 							);
 						}}
 					</ProductConsumer>
