@@ -252,25 +252,30 @@ class ProductProvider extends Component {
 	};
 	sortData = () => {
 		const { storeProducts, price, company, shipping, search } = this.state;
-
+		//create a variable to store price as an integer
 		let tempPrice = parseInt(price);
+		//we want to still render store product, so create a variable version of store
 		let tempProducts = [...storeProducts];
 		//filter base on price
 		tempProducts = tempProducts.filter((item) => item.price <= tempPrice);
 		//filter base on company
 
 		if (company !== "all") {
+			//if the company list isn't all, filter through to the item to find company
 			tempProducts = tempProducts.filter((item) => item.company === company);
 		}
 
 		//filter by shipping
 		if (shipping) {
+			//find where shipping returns true
 			tempProducts = tempProducts.filter((item) => item.freeShipping === true);
 		}
 		//filter by search
 		if (search.length > 0) {
 			tempProducts = tempProducts.filter((item) => {
+				//in case users uses capital
 				let tempSearch = search.toLowerCase();
+				//start search by first letter till the full length
 				let tempTitle = item.title.toLowerCase().slice(0, search.length);
 				if (tempSearch === tempTitle) {
 					return item;
