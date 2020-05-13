@@ -10,7 +10,6 @@ export default function CartItem({
 	decrement,
 	removeItem,
 }) {
-	//We can't read the props here
 	const { id, title, price, count, total, image } = cartItem;
 
 	return (
@@ -59,7 +58,7 @@ export default function CartItem({
 			{/*end of remove */}
 			{/* item total */}
 			<div className="col-10 mx-auto col-lg-2">
-				<strong className="text-muted">item total : ${total}</strong>
+				<strong className="text-muted">item total : £{total}</strong>
 			</div>
 			{/* end item total */}
 		</div>

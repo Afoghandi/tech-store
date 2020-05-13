@@ -9,7 +9,13 @@ export default function CartList() {
 				<div className="col">
 					<ProductConsumer>
 						{(value) => {
-							const { cart, increment, decrement, removeItem } = value;
+							const {
+								cart,
+								increment,
+								decrement,
+								removeItem,
+								cartTotal,
+							} = value;
 							if (cart.length === 0) {
 								return (
 									<h1 className="text-title text-center my-4">
@@ -22,11 +28,11 @@ export default function CartList() {
 									{cart.map((item) => (
 										<CartItem
 											key={item.id}
-											//here we have the cartItem props
 											cartItem={item}
 											increment={increment}
 											decrement={decrement}
 											removeItem={removeItem}
+											tax={cartTotal}
 										/>
 									))}
 								</>

@@ -3,8 +3,9 @@ import React from "react";
 import Title from "../Title";
 import CartColumns from "./CartColumns";
 import CartList from "./CartList";
-import CartItem from "./CartItem";
+
 import CartTotals from "./CartTotals";
+import Test from "./Test";
 export default function Cart() {
 	return (
 		<section className="py-5">
@@ -14,8 +15,8 @@ export default function Cart() {
 			</div>
 			<CartColumns />
 			<CartList />
-			<CartItem />
 			<CartTotals />
+			<Test />
 		</section>
 	);
 }
