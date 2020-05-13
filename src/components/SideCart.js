@@ -16,13 +16,14 @@ export default function SideCart() {
 										<img
 											width="35"
 											img
-											src={`../${item.image}`}
+											//src={`../${item.image}`}
+											src={item.image}
 											alt="cart item"
 										/>
 										<div className="mt-3">
-											<h6 className="text-uppercase">{item.title} </h6>
+											<h6 className="text-uppercase"> {item.title} </h6>{" "}
 											<h6 className="text-title text-capitalize">
-												amount:{item.count}{" "}
+												amount: {item.count}
 											</h6>
 										</div>
 									</li>
@@ -30,13 +31,12 @@ export default function SideCart() {
 							})}
 						</ul>
 						<h4 className="text-capitlize text-main">
-							{" "}
-							cart total: ${cartTotal}{" "}
+							cart total: $ {cartTotal}
 						</h4>
 						<div className="text-center my-5">
 							<Link to="/cart" className="main-link">
 								cart page
-							</Link>{" "}
+							</Link>
 						</div>
 					</CartWrapper>
 				);
